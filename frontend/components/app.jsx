@@ -1,4 +1,5 @@
 import React from 'react';
+import SynthContainer from './synth/synth_container.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -8,7 +9,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        App
+        <SynthContainer />
       </div>
     );
   }

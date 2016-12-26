@@ -1,0 +1,17 @@
+import { connect } from 'react-redux';
+import Synth from './synth.jsx';
+import { keyPressed, keyReleased } from '../../actions/notes_actions.js';
+
+const mapStateToProps = state => ({
+  notes: state.notes
+});
+
+const mapDispatchToProps = dispatch => ({
+  keyPressed: key => dispatch(keyPressed(key)),
+  keyReleased: key => dispatch(keyPressed(key))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Synth);
