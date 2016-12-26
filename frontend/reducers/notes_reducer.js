@@ -5,11 +5,11 @@ const _defaultState = () => {
   return [];
 };
 
-const noteReducer = (state = _defaultState(), action) => {
+const notes = (state = _defaultState(), action) => {
   Object.freeze(state);
   let nextState = state.slice();
   if (NOTE_NAMES.indexOf(action.key) === -1) return nextState;
-  
+
   switch (action.type) {
     case KEY_PRESSED:
       if(nextState.indexOf(action.key) === -1) {
@@ -26,3 +26,5 @@ const noteReducer = (state = _defaultState(), action) => {
       return state;
   }
 };
+
+export default notes;
