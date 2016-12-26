@@ -1,5 +1,6 @@
 import { KEY_PRESSED, KEY_RELEASED } from "../actions/notes_actions.js";
-import NOTE_NAMES from '../util/tones.js';
+import * as TONES from '../util/tones.js';
+const NOTE_NAMES = TONES.NOTE_NAMES;
 
 const _defaultState = () => {
   return [];
@@ -8,6 +9,7 @@ const _defaultState = () => {
 const notes = (state = _defaultState(), action) => {
   Object.freeze(state);
   let nextState = state.slice();
+
   if (NOTE_NAMES.indexOf(action.key) === -1) return nextState;
 
   switch (action.type) {
