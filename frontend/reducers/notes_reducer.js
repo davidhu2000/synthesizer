@@ -14,13 +14,11 @@ const notes = (state = _defaultState(), action) => {
 
   switch (action.type) {
     case KEY_PRESSED:
-      console.log('pressed');
       if(nextState.indexOf(action.key) === -1) {
         nextState.push(action.key);
       }
       return nextState;
     case KEY_RELEASED:
-      console.log('released');
       let keyIdx = nextState.indexOf(action.key);
       if (keyIdx !== -1) {
         nextState.splice(keyIdx, 1);
