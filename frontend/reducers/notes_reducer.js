@@ -1,4 +1,7 @@
-import { KEY_PRESSED, KEY_RELEASED } from "../actions/notes_actions.js";
+import { KEY_PRESSED,
+         KEY_RELEASED,
+         GROUP_UPDATE } from "../actions/notes_actions.js";
+
 import * as TONES from '../util/tones.js';
 const NOTE_NAMES = TONES.NOTE_NAMES;
 
@@ -24,6 +27,8 @@ const notesReducer = (state = _defaultState(), action) => {
         nextState.splice(keyIdx, 1);
       }
       return nextState;
+    case GROUP_UPDATE:
+      return [...action.notes];
     default:
       return state;
   }
