@@ -4,6 +4,7 @@ const TONES = TONE_NAMES.TONES;
 const NOTE_NAMES = TONE_NAMES.NOTE_NAMES;
 import Note from '../../util/note.js';
 import $ from 'jquery';
+import NoteKey from './note_key.jsx';
 
 class Synth extends React.Component {
   constructor(props) {
@@ -48,7 +49,13 @@ class Synth extends React.Component {
     this.playNotes();
     return (
       <div>
-        Playing notes
+        <ul>
+          {
+            NOTE_NAMES.map((note, idx) => (
+              <NoteKey key={idx} note={note} />
+            ))
+          }
+        </ul>
       </div>
     );
   }
