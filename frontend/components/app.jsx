@@ -1,5 +1,6 @@
 import React from 'react';
 import SynthContainer from './synth/synth_container.jsx';
+import RecorderContainer from './recorder/recorder_container.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -10,6 +11,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <SynthContainer />
+        <RecorderContainer />
       </div>
     );
   }

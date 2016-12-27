@@ -9,15 +9,20 @@ import NoteKey from './note_key.jsx';
 class Synth extends React.Component {
   constructor(props) {
     super(props);
+
+    this.addNotes = props.addNotes;
     this.notes = this.createNotes();
   }
 
   onKeyDown(e) {
     this.props.keyPressed(e.key);
+    if (this.props.isRecording) this.addNotes(this.props.notes);
   }
 
   onKeyUp(e) {
     this.props.keyReleased(e.key);
+
+    if (this.props.isRecording) this.addNotes(this.props.notes);
   }
 
   componentDidMount() {

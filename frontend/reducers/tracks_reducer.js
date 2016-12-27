@@ -9,6 +9,7 @@ const trackReducer = (state, action) => {
   Object.freeze(state);
   switch(action.type) {
     case START_RECORDING:
+      console.log('start recording');
       return {
         id: currTrackId,
         name: `Track ${currTrackId}`,
@@ -16,6 +17,7 @@ const trackReducer = (state, action) => {
         timeStart: action.timeStart
       };
     case STOP_RECORDING:
+      console.log('stop recording');
       return merge({}, state, {
         roll: [
           ...state.roll,
@@ -23,6 +25,8 @@ const trackReducer = (state, action) => {
         ]
       });
     case ADD_NOTES:
+      console.log('adding notes');
+      console.log(action.notes);
       return merge({}, state, {
         roll: [
           ...state.roll,
