@@ -6,7 +6,7 @@ const _defaultState = () => {
   return [];
 };
 
-const notes = (state = _defaultState(), action) => {
+const notesReducer = (state = _defaultState(), action) => {
   Object.freeze(state);
   let nextState = state.slice();
 
@@ -29,4 +29,4 @@ const notes = (state = _defaultState(), action) => {
   }
 };
 
-export default notes;
+export default notesReducer;
