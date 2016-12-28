@@ -5,13 +5,13 @@ const Recorder = ({isRecording, isPlaying, startRecording, stopRecording}) => (
       <div className='recorder-title'>
         Recorder
       </div>
-      <button className='start-button'
+      <button className='button start-button'
               disabled={isRecording || isPlaying}
               onClick={startRecording}>
         Start
       </button>
 
-      <button className='stop-button'
+      <button className='button stop-button'
               disabled={!isRecording || isPlaying}
               onClick={stopRecording}>
         Stop

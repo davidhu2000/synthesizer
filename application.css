@@ -15,12 +15,7 @@
   margin: 0 auto;
 }
 
-.recorder-title {
-  margin: 20px 0 0 0;
-  font-size: 2.5em;
-
-}
-
+/* Notes */
 .note-key-list {
   display: flex;
   list-style: none;
@@ -46,4 +41,36 @@
   box-shadow: none;
   transform-origin: top;
   transform: rotateX(8deg)
+}
+
+/* Recorder */
+.recorder-title {
+  margin: 20px 0 0 0;
+  font-size: 2.5em;
+}
+
+.button {
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+}
+
+.button:hover {
+  box-shadow: 0px 3px 3px #707172;
+}
+
+.button:disabled {
+  background: white;
+  color: #7a7a7a;
+}
+
+.start-button {
+  background: green;
+  color: white;
+  margin-right: 20px;
+}
+
+.stop-button {
+  background: red;
+  color: white;
 }
