@@ -1,4 +1,4 @@
-This program is building using React/Redux.
+This program is built using React/Redux.
 
 ### Setup
 Run `npm install` to install all dependencies.
