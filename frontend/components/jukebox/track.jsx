@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Track = ({ track, disabled, onPlay }) => (
-  <div>
-    <div>{track.name}</div>
+  <div className='track'>
+    <div className='track-name'>{track.name}</div>
     <div>
-      <button disabled={disabled}
+      <button className='play-button'
+              disabled={disabled}
               onClick={onPlay}>
         Play
       </button>

@@ -3,11 +3,10 @@ import Track from './track.jsx';
 
 const Jukebox = ({ tracks, isPlaying, isRecording, onPlay }) => (
   <div>
-    <div>Jukebox</div>
+    <div className="jukebox-title">Jukebox</div>
     {
       Object.keys(tracks).map( id => (
-        <Track className='track'
-               key={`track-${id}`}
+        <Track key={`track-${id}`}
                track={tracks[id]}
                disabled={isRecording || isPlaying}
                onPlay={onPlay(tracks[id])}/>
