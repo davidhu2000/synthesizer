@@ -31,6 +31,10 @@ const trackReducer = (state, action) => {
           { notes: action.notes, timeSlice: action.timeNow - state.timeStart}
         ]
       });
+    case RENAME_TRACK:
+      return merge({}, state, {
+        name: action.name
+      });
     default:
       return state;
   }
@@ -57,8 +61,8 @@ const tracksReducer = (state = {}, action) => {
       delete newState[action.id];
       return newState;
     case RENAME_TRACK:
-      return merge({}, merge, {
-        [action.id]: { name: action.name }
+      return merge({}, state, {
+        [action.id]: trackReducer(state[action.id], action)
       });
     default:
       return state;
