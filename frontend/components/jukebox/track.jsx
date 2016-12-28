@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Track = ({ track, disabled, onPlay, onDelete }) => (
+const Track = ({ track, disabled, onPlay, onDelete, onRename }) => (
   <ul className='track'>
     <li className='track-name'>{track.name}</li>
     <li>
@@ -8,6 +8,13 @@ const Track = ({ track, disabled, onPlay, onDelete }) => (
               disabled={disabled}
               onClick={onPlay}>
         Play
+      </button>
+    </li>
+    <li>
+      <button className='jukebox-button rename-button'
+              disabled={disabled}
+              onClick={onRename}>
+        Rename
       </button>
     </li>
     <li>

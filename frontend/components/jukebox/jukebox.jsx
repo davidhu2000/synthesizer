@@ -1,7 +1,7 @@
 import React from 'react';
 import Track from './track.jsx';
 
-const Jukebox = ({ tracks, isPlaying, isRecording, onPlay, onDelete }) => (
+const Jukebox = ({ tracks, isPlaying, isRecording, onPlay, onDelete, onRename }) => (
   <div>
     <div className="jukebox-title">Jukebox</div>
     {
@@ -10,7 +10,8 @@ const Jukebox = ({ tracks, isPlaying, isRecording, onPlay, onDelete }) => (
                track={tracks[id]}
                disabled={isRecording || isPlaying}
                onPlay={onPlay(tracks[id])}
-               onDelete={onDelete(id)} />
+               onDelete={onDelete(id)}
+               onRename={onRename(id, 'yo')}/>
       ))
     }
   </div>

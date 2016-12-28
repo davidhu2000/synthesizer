@@ -3,7 +3,8 @@ import Jukebox from './jukebox.jsx';
 import { groupUpdate } from '../../actions/notes_actions.js';
 import { startPlaying,
          stopPlaying,
-         deleteTrack } from '../../actions/playing_actions.js';
+         deleteTrack,
+         renameTrack } from '../../actions/playing_actions.js';
 
 const mapStateToProps = (state) => ({
   tracks: state.tracks,
@@ -15,6 +16,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch => ({
   onDelete: id => e => {
     dispatch(deleteTrack(id));
+  },
+  onRename: (id, name) => e => {
+    dispatch(renameTrack(id, name));
   },
   onPlay: track => e => {
     dispatch(startPlaying());
