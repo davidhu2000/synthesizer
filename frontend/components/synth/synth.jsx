@@ -50,14 +50,20 @@ class Synth extends React.Component {
     return notes;
   }
 
+  pressed(note) {
+    let pressed = this.props.notes.indexOf(note) !== -1 ? ' pressed' : '';
+    // console.log(pressed);
+    return pressed;
+  }
+
   render() {
     this.playNotes();
     return (
-      <div>
-        <ul>
+      <div className='synth'>
+        <ul className="note-key-list">
           {
             NOTE_NAMES.map((note, idx) => (
-              <NoteKey key={idx} note={note} />
+              <NoteKey key={idx} note={note} pressed={this.pressed(note)} />
             ))
           }
         </ul>

@@ -1,0 +1,49 @@
+.app {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.title {
+  font-size: 5em;
+  margin: 0;
+}
+
+.synth {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.recorder-title {
+  margin: 20px 0 0 0;
+  font-size: 2.5em;
+
+}
+
+.note-key-list {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.note-key {
+  box-sizing: border-box;
+  font-weight: bold;
+  display: block;
+  height: 250px;
+  width: 100px;
+  border: 3px solid black;
+  margin-right: -1px;
+  padding-top: 5px;
+  font-size: 50px;
+  box-shadow: 0px 10px 5px #888888;
+  border-radius: 10px;
+}
+
+.pressed {
+  background: #707172;
+  box-shadow: none;
+  transform-origin: top;
+  transform: rotateX(8deg)
+}

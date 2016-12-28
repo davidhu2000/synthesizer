@@ -6,7 +6,8 @@ const Jukebox = ({ tracks, isPlaying, isRecording, onPlay }) => (
     <div>Jukebox</div>
     {
       Object.keys(tracks).map( id => (
-        <Track key={`track-${id}`}
+        <Track className='track'
+               key={`track-${id}`}
                track={tracks[id]}
                disabled={isRecording || isPlaying}
                onPlay={onPlay(tracks[id])}/>

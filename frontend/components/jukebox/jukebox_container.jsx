@@ -19,7 +19,6 @@ const mapDispatchToProps = dispatch => ({
     let timeElapsed;
     let interval = setInterval(() => {
       if(currNote < track.roll.length) {
-        console.log(currNote);
         timeElapsed = Date.now() - playBackStartTime;
         if (timeElapsed >= track.roll[currNote].timeSlice) {
           dispatch(groupUpdate(track.roll[currNote].notes));

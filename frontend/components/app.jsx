@@ -11,6 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
+        <h1 className={'title'}>Synthesizer</h1>
         <SynthContainer />
         <RecorderContainer />
         <JukeboxContainer />
