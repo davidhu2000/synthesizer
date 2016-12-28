@@ -3,6 +3,7 @@ import rootReducer from '../reducers/root_reducer.js';
 
 const preloadedState = ({
   notes: [],
+  tracks: {},
   isRecording: false,
   isPlaying: false
 });
