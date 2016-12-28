@@ -90,6 +90,7 @@
   font-size: 1.5em;
   height: 40px;
   justify-content: center;
+  list-style: none;
 }
 
 .track-name {
@@ -97,24 +98,30 @@
   width: 100px;
 }
 
-.play-button {
+.jukebox-button {
   display: block;
-  background-color: #87f2b4;
   height: 25px;
+  width: 80px;
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 3px;
+  margin-right: 10px;
+  text-align: center;
 }
 
-.play-button:disabled {
+.jukebox-button:disabled {
   background: white;
   color: #7a7a7a;
 }
 
-.play-button:hover {
+.jukebox-button:hover {
   box-shadow: 0px 2px 2px #707172;
 }
 
-.play-button:disabled:hover {
+.jukebox-button:disabled:hover {
   box-shadow: none;
+}
+
+.play-button {
+  background-color: #87f2b4;
 }

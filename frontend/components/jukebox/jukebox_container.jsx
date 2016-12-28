@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import Jukebox from './jukebox.jsx';
 import { groupUpdate } from '../../actions/notes_actions.js';
 import { startPlaying,
-         stopPlaying } from '../../actions/playing_actions.js';
+         stopPlaying,
+         deleteTrack } from '../../actions/playing_actions.js';
 
 const mapStateToProps = (state) => ({
   tracks: state.tracks,
@@ -12,6 +13,9 @@ const mapStateToProps = (state) => ({
 
 
 const mapDispatchToProps = dispatch => ({
+  onDelete: id => e => {
+    dispatch(deleteTrack(id));
+  },
   onPlay: track => e => {
     dispatch(startPlaying());
     let playBackStartTime = Date.now();

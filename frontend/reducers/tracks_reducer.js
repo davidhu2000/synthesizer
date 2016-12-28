@@ -1,4 +1,5 @@
 import merge from 'lodash/merge';
+import { DELETE_TRACK } from '../actions/playing_actions.js';
 import { START_RECORDING,
          STOP_RECORDING,
          ADD_NOTES } from '../actions/track_actions.js';
@@ -36,7 +37,6 @@ const trackReducer = (state, action) => {
 
 const tracksReducer = (state = {}, action) => {
   Object.freeze(state);
-
   switch(action.type) {
     case START_RECORDING:
       currTrackId++;
@@ -51,6 +51,10 @@ const tracksReducer = (state = {}, action) => {
       return merge({}, state, {
         [currTrackId]: trackReducer(state[currTrackId], action)
       });
+    case DELETE_TRACK:
+      let newState = merge({}, state);
+      delete newState[action.id];
+      return newState;
     default:
       return state;
   }
