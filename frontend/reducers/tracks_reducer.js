@@ -32,6 +32,8 @@ const trackReducer = (state, action) => {
         ]
       });
     case RENAME_TRACK:
+      console.log('renaming');
+      console.log(action);
       return merge({}, state, {
         name: action.name
       });

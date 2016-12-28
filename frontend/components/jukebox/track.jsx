@@ -1,5 +1,12 @@
 import React from 'react';
 
+const openModal = (id) => (e) => {
+  e.preventDefault();
+  let modal = document.getElementById('modal');
+  modal.className = '';
+  modal.setAttribute('trackId', id);
+};
+
 const Track = ({ track, disabled, onPlay, onDelete, onRename }) => (
   <ul className='track'>
     <li className='track-name'>{track.name}</li>
@@ -11,9 +18,10 @@ const Track = ({ track, disabled, onPlay, onDelete, onRename }) => (
       </button>
     </li>
     <li>
-      <button className='jukebox-button rename-button'
+      <button key={track.id}
+              className='jukebox-button rename-button'
               disabled={disabled}
-              onClick={onRename}>
+              onClick={openModal(track.id)}>
         Rename
       </button>
     </li>

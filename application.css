@@ -126,3 +126,19 @@
 .play-button {
   background-color: #87f2b4;
 }
+
+/* modal */
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  width: 300px;
+  height: 100px;
+  background: rgba(86, 86, 86, 0.95);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}

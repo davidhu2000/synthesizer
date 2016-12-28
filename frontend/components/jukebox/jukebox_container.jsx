@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => ({
   onDelete: id => e => {
     dispatch(deleteTrack(id));
   },
-  onRename: (id, name) => e => {
+  onRename: (id, name) => {
     dispatch(renameTrack(id, name));
   },
   onPlay: track => e => {
