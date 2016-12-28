@@ -7,7 +7,7 @@ const openModal = (id) => (e) => {
   modal.setAttribute('trackId', id);
 };
 
-const Track = ({ track, disabled, onPlay, onDelete, onRename }) => (
+const Track = ({ track, disabled, onPlay, onDelete }) => (
   <ul className='track'>
     <li className='track-name'>{track.name}</li>
     <li>

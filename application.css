@@ -129,16 +129,55 @@
 
 /* modal */
 #modal {
+  z-index: 10;
   position: fixed;
   top: 50%;
   left: 40%;
-  width: 300px;
-  height: 100px;
-  background: rgba(86, 86, 86, 0.95);
+  width: 400px;
+  height: 150px;
+  background: rgba(86, 86, 86, 0.99);
   padding: 10px;
   border-radius: 5px;
+  opacity: 1;
+}
+
+.modal-title {
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+}
+
+.modal-input {
+  /*display: block;*/
+  width: 80%;
+  margin: 15px auto 15px auto;
+  height: 25px;
+  font-size: 1.2em;
+}
+
+.modal-button {
+  margin-top: 10px;
+  width: 90px;
+  height: 35px;
+  background: #a1e855;
+  font-family: inherit;
+  font-size: 1.3em;
+}
+
+.modal-button:hover {
+  background: #a1e800;
+  box-shadow: 0px 3px 3px #707172;
 }
 
 .hidden {
   display: none;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.8);
+	top: 0;
+	bottom: 0;
+	width: 100vw;
+	left: calc(-50vw + 50%);
 }

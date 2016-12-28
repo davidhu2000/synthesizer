@@ -16,8 +16,7 @@ const Jukebox = ({ tracks, isPlaying, isRecording, onPlay, onDelete, onRename })
                track={tracks[id]}
                disabled={isRecording || isPlaying}
                onPlay={onPlay(tracks[id])}
-               onDelete={onDelete(id)}
-               onRename={onRename}/>
+               onDelete={onDelete(id)} />
       ))
     }
   </div>

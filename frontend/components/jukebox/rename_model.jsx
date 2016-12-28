@@ -3,7 +3,6 @@ import React from 'react';
 class RenameModal extends React.Component {
   constructor(props) {
     super(props);
-    this.tracks = props.tracks;
     this.onRename = props.onRename;
     this.state = {name: ''};
     this.handleChange = this.handleChange.bind(this);
