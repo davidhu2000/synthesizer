@@ -1,5 +1,7 @@
 This program is built using React/Redux.
 
+![Synthesizer Screenshoot](images/synthesizer.png)
+
 ### Setup
 Run `npm install` to install all dependencies.
 
